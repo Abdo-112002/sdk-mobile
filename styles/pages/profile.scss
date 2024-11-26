@@ -1,0 +1,131 @@
+@import "../style";
+
+.profilePage {
+    width: 100%;
+    max-width: 600px;
+    height: 750px;
+    margin-top: auto;
+    padding: 20px;
+    @include flexColumns(35px);
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: relative;
+    .userAvatar {
+        width: 74px;
+        height: 74px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: absolute;
+        top: -35px;
+        inset-inline: 50%;
+        background-color: $mainLightColor;
+        transform: translateX(-50%);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        margin-top: 40px;
+        height: 100%;
+        @include flexColumns(20px);
+        .personalInfo {
+            text-align: center;
+            @include flexColumns(10px);
+            .name {
+                font-size: 18px;
+                font-weight: 700;
+                color: $mainDarkColor;
+            }
+            .email {
+                font-size: 14px;
+                font-weight: 400;
+                color: $mainColor;
+            }
+            .degitalInfo {
+                margin-top: 10px;
+                min-height: 69px;
+                background-color: $mainLightColor;
+                border-radius: 10px;
+                padding: 20px 30px;
+                position: relative;
+                @include flexCenter(10px){
+                    justify-content: space-between;
+                }
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    inset-inline: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 1px;
+                    height: 60%;
+                    background-color: #CDCAD0;
+                }
+                .key {
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: $textColor;
+                    margin-bottom: 5px;
+                }
+                .value {
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: $mainDarkColor;
+                }
+            }
+        }
+        .companyDetails {
+            @include flexColumns(5px);
+            .title {
+                 font-size: 12px;
+                 font-weight: 400;
+                 color: $mainDarkColor;
+            }
+            .companyInfo {
+                padding: 20px;
+                background-color: $mainLightColor;
+                min-height: 66px;
+                @include flexCenter(20px){
+                    justify-content: flex-start;
+                }
+                .image {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .key {
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: $textColor;
+                    margin-bottom: 5px;
+                }
+                .value {
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: $mainDarkColor;
+                }
+            }
+        }
+        .getStarted {
+            margin-top: auto;
+            @include flexColumns(15px);
+            .form-check-label {
+                font-size: 12px;
+                font-weight: 400;
+                color: $textColor;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,103 @@
+@mixin flexCenter($gap)  {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: $gap;
+	@content;
+}
+
+@mixin flexColumns($gap)  {
+	display: flex;
+	flex-direction: column;
+	gap: $gap;
+	@content;
+}
+
+@mixin imageFullyRounded($width,$height)  {
+	width: $width;
+	height: $height;
+	border-radius: 50%;
+	@content;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+
+@mixin formGlobalInfoStyles() {
+	flex-grow: 1;
+	@include flexColumns(40px) {
+		align-items: flex-start;
+	}
+	@include devices(medium) {
+		order: 1;
+	}
+	.loginSection__info--dec {
+		color: $textColor;
+		font-size: 12px;
+		font-weight: 400;
+		max-width: 82%;
+		@include devices(medium) {
+			max-width: 85%;
+		}
+		a {
+			color: $mainColor;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+	}
+	.btn.btn-secondary {
+		padding: 0;
+		height: 37px;
+		font-size: 12px;
+		font-weight: 400;
+		@include flexCenter(10px);
+		min-width: 113px;
+		border-radius: 30px;
+		@include devices(medium) {
+			width: fit-content;
+		}
+	}
+	@content;
+}
+
+@mixin imageStyles($width,$height) {
+	width: $width;
+	height: $height;
+	@content;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+@mixin devices($breakpoint) {
+	//the name of the mixin is devices
+
+	@if $breakpoint == extra_large	 {
+		@media only screen and (max-width: 1200px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == large {
+		@media only screen and (max-width: 992px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == medium {
+		@media only screen and (max-width: 768px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == small {
+		@media only screen and (max-width: 576px) {
+			@content;
+		}
+	}
+}

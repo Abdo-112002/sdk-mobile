@@ -1,0 +1,66 @@
+.buttonCom {
+    border-radius: $mainBorderRadius;
+    background-color: $mainColor;
+    padding: 12px 24px;
+    font-size: 13px;
+    font-weight: 700;
+    border-color: transparent;
+    text-transform: uppercase;
+    @include devices(medium) {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+.btn.btn-primary {
+    @extend .buttonCom;
+    &:hover {
+        background-color: $titleColor;
+    }
+}
+
+.btn.btn-light {
+    padding: 12px 24px;
+    border-radius: $mainBorderRadius;
+    font-size: 13px;
+    font-weight: 700;
+    border-color: transparent;
+    text-transform: uppercase;
+    @include devices(medium) {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+.btn.btn-secondary {
+    @extend .buttonCom;
+    background-color: $mainLightColor;
+    color: $mainColor;
+    font-weight: 400;
+    &:hover {
+        background-color: $mainColor;
+        color: $whiteColor;
+        svg {
+            fill: $whiteColor;
+            path {
+                fill: $whiteColor;
+            }
+        }
+    }
+}
+
+.btn.btn-outline-primary {
+    @extend .buttonCom;
+    background-color: transparent;
+    color: $mainColor;
+    border-color: $mainColor;
+    &:hover {
+        background-color: $mainColor;
+        color: $whiteColor;
+    }
+}
+
+.form-check-input:checked {
+    background-color: $mainColor;
+    color: $mainColor;
+}

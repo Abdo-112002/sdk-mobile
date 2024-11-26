@@ -1,0 +1,36 @@
+@import "../style";
+
+.loginPage {
+    max-width: 600px;
+    height: 700px;
+    margin-top: auto;
+    padding: 20px;
+    @include flexColumns(35px);
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    &__header {
+        @include flexColumns(5px);
+        .title {
+            font-weight: 700;
+            font-size: 16px;
+            color: $mainDarkColor;
+            text-align: center;
+        }
+        .desc {
+            font-weight: 400;
+            font-size: 12px;
+            color: $textColor;
+            text-align: center;
+        }
+    }
+
+    &__form {
+        height: 100%;
+        @include flexColumns(20px) {
+            justify-content: space-between;
+        }
+        
+    }
+}

@@ -1,0 +1,8 @@
+// base configuration
+@import "./base/variables", "./base/base";
+// helpers
+@import "./helpers/mixin", "./helpers/helper";
+
+// components that use in this page
+@import "./components/mainButton", 
+        "./components/inputs"

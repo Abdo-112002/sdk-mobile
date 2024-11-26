@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Qsalary | Profile</title>
+
+        <!-- main app external font  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- for design system lib css -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+
+        <!-- home page -->
+        <link rel="stylesheet" href="styles/pages/profile.css" />
+    </head>
+    <body>
+
+        <section class="profilePage">
+            <div class="userAvatar">
+                <img src="assets/Group 2140.png" alt="user image">
+            </div>
+            <div class="profilePage__content">
+                <div class="personalInfo">
+                    <p class="name">Salam</p>
+                    <p class="email">name@gmail.com</p>
+                    <div class="degitalInfo">
+                        <div>
+                            <p class="key">Phone Number</p>
+                            <p class="value">+966 372 857 34</p>
+                        </div>
+                        <div>
+                            <p class="key">ID Number</p>
+                            <p class="value">372 857 34 49</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="companyDetails">
+                    <p class="title">Company Details</p>
+                    <div class="companyInfo">
+                        <div class="image">
+                            <img src="assets/companyImg.png" alt="companyInfo">
+                        </div>
+                        <div>
+                            <p class="key">Qsalary - Expedited Payment</p>
+                            <p class="value">2134790328</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bankingData companyDetails">
+                    <p class="title">Banking data</p>
+                    <div class="companyInfo">
+                        <div class="image">
+                            <img src="assets/bank.png" alt="Banking data">
+                        </div>
+                        <div>
+                            <p class="key">Al Rajhi Bank</p>
+                            <p class="value">SA03 8000 0000 6080 1016 7519</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="getStarted">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">
+                            I acknowledge that all my information is correct,and I am solely responsible for any error in information. I have read and understoodterms and conditions and privacy policy.
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn-primary">
+                        START NOW
+                    </button>
+                    <button type="button" class="btn btn-secondary">
+                        My data is incorrect    
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- for design system lib js -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

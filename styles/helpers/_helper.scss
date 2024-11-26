@@ -1,0 +1,140 @@
+.pageWrapper {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    @include flexCenter(0);
+    padding: 15px;
+    @include devices(small) {
+        padding: 0px;
+        align-items: stretch;
+    }
+}
+
+.reDirAuto {
+    [dir="ltr"] & {
+        direction: rtl;
+    }
+    [dir="rtl"] & {
+        direction: ltr;
+    }
+}
+
+.cardStyle {
+    box-shadow: $minBoxShadow;
+    padding: 20px;
+    border-radius: $mainBorderRadius;
+    background-color: $whiteColor;
+}
+
+.cardTitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: $titleColor;
+}
+
+.cardDesc {
+    font-size: 11px;
+    font-weight: 400;
+    color: $textColor;
+}
+
+.form--inputsWrapper {
+    @include flexColumns(10px);
+    label {
+        font-size: 12px;
+        color: $titleColor;
+        margin-bottom: 0;
+    }
+}
+
+.bodyResponsive {
+    width: 100%;
+    margin: auto;
+    @include devices(medium) {
+        overflow-x: auto;
+    }
+}
+
+.tableActions {
+    height: 34px;
+    padding: 7.14px 16.73px 8.66px 16.93px;
+    font-size: 10px;
+    font-weight: 500;
+    border-radius: 7px;
+    &--light {
+        background-color: $whiteColor;
+        color: $textColor;
+    }
+    &--primary {
+        background-color: $mainColor;
+        color: $whiteColor;
+    }
+    &--secondary {
+        background-color: $mainLightColor;
+        color: $mainColor;
+    }
+}
+
+.pagination {
+    @include flexCenter(5px);
+    align-items: stretch;
+    justify-content: flex-start;
+}
+.pagination .allPages .page-link {
+    border-radius: 4px;
+    color: #6c757d;
+    font-size: 13px;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    @include flexCenter(0);
+}
+.pagination .allPages {
+    @include flexCenter(5px);
+}
+
+.pagination .page-control {
+    .page-link {
+        border-radius: 4px;
+        color: #6c757d;
+        font-size: 11px;
+        cursor: pointer;
+        padding: 0 16px;
+        height: 40px;
+        @include flexCenter(0);
+    }
+}
+
+.pagination .allPages .page-item.active .page-link,
+.pagination .allPages .page-item:has(:hover) .page-link {
+    background-color: $mainColor !important;
+    color: white !important;
+    cursor: pointer;
+}
+
+.select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
+    line-height: 2.5;
+    width: 100%;
+}
+.select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow {
+    height: 100%;
+}
+.select2-container--default .select2-selection--single {
+    height: 2.5rem;
+    border: 1px solid #dee2e6 !important;
+}
+.select2-selection {
+    background-color: $mainLightColor !important;
+}
+.flag-icon {
+    margin-right: 8px;
+}
+.flag {
+    width: 20px;
+    height: 15px;
+    margin-right: 8px;
+}
